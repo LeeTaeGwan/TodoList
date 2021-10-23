@@ -13,7 +13,12 @@ function addList(e) {
   if(e.type === 'click' || e.key === 'Enter'){
     let div = document.createElement('div')
     div.classList.add('list')
-    div.classList.add(`list${count}`)
+    if(count === 9) {
+      count = 1;  // 왜 class가 10부터 삭제버튼이 안먹지?
+      div.classList.add(`list${count}`)
+    } else {
+      div.classList.add(`list${count}`)
+    }
 
     let checkBtn = document.createElement('input')
     checkBtn.setAttribute('type','checkbox')
