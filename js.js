@@ -14,7 +14,7 @@ function addList(e) {
     let div = document.createElement('div')
     div.classList.add('list')
     if(count === 9) {
-      count = 1;  // 왜 class가 10부터 삭제버튼이 안먹지?
+      count = 1;  // 왜 class가 10부터 삭제버튼이 안먹지? // overflow scroll 더 이쁘게
       div.classList.add(`list${count}`)
     } else {
       div.classList.add(`list${count}`)
